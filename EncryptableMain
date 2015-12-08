@@ -1,0 +1,30 @@
+//Name: Veronica Ciliberto
+//Date: December 7, 2015
+//Period: 7
+//Lab: Encryptable Main
+//I got help from:
+
+import java.util.Scanner;
+public class EncryptableMain
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+
+		//Beginning
+		System.out.println("Please enter a String to be encrypted.");
+		EncryptableString s = new EncryptableString(scan.nextLine());
+
+		System.out.println("Please enter an offset to use (1-26)");
+		int offset = scan.nextInt();
+
+		//Encrypt
+		System.out.println("After encryption: ");
+		s.encrypt(offset);
+		System.out.println();
+
+		//Decrypt
+		System.out.println("fter decryption: ");
+		s.decrypt(offset);
+	}
+}
